@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="de" ng-app="xwing">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -33,13 +33,14 @@
    	  </div>
 	</div>
   <div class="container">
-    <div class="col-md-10">
-      
+    <div ng-controller="cardController as carddb" class="col-md-10">
+      <h1> {{carddb.cards[0].name}}      
     </div> 
   </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/angular.min.js"></script>
+    <script srv="js/app.js"></script>
   <div class='container '>
     <div class='row'>
       <div class='col-md-8 col-offset-2'>
