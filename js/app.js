@@ -2,9 +2,7 @@ var app = angular.module('xwing', []);
 
 app.controller('cardController', ['$http', function($http) {
   var cards = this;
-  $http.get('data/test/modifications.json').success(function($http){
-    cards.modifications = data;
-  });
+  this.modifications = mtest;
   this.pilots = ptest;
   this.ships = stest;
 }]);
