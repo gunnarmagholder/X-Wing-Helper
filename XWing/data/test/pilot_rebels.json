@@ -6,7 +6,7 @@
           ship: "X-Wing",
           skill: 9,
           points: 29,
-          slots: ["Elite", "Torpedo", "Astromech"]
+          slots: ["Elite", "Torpedo", "Astromech"],
           image: "../images/Piloten Rebellen/xwing_wedgeantilles"
         }, {
           name: "Garven Dreis",
@@ -16,7 +16,7 @@
           ship: "X-Wing",
           skill: 6,
           points: 26,
-          slots: ["Torpedo", "Astromech"]
+          slots: ["Torpedo", "Astromech"],
           image: "../images/Piloten Rebellen/xwing_garvendreis"
         }, {
           name: "Red Squadron Pilot",
@@ -25,7 +25,7 @@
           ship: "X-Wing",
           skill: 4,
           points: 23,
-          slots: ["Torpedo", "Astromech"]
+          slots: ["Torpedo", "Astromech"],
           image: "../images/Piloten Rebellen/xwing_rotstaffel"
         }, {
           name: "Gray Squadron Pilot",
