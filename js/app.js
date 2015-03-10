@@ -1,10 +1,13 @@
 var app = angular.module('xwing', []);
 
-app.controller('cardController', function() {
-  this.modifications = mtest;
+app.controller('cardController', ['$http', function($http) {
+  var cards = this;
+  $http.get('data/test/modifications.json').success(function($http){
+    cards.modifications = data;
+  });
   this.pilots = ptest;
   this.ships = stest;
-});
+}]);
 
 var mtest = [
         {  
@@ -60,7 +63,7 @@ var ptest = [
         }
 ];
 var stest = [
- {
+{
           name: "X-Wing",
           factions: ["Rebel Alliance"],
           attack: 3,
