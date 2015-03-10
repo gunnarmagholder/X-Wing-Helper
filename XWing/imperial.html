@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="de" ng-app="xwing">
+<html ng-app='xwing'>
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -16,7 +16,7 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
-  <body ng-controller="cardController as carddb">
+  <body ng-controller='cardController as carddb'>
   	<div>
   		<ul class='nav nav-pills'>
   			<li ><a href='#'>Home</a></li>
@@ -29,24 +29,24 @@
 	  </div>
 	  <div class='col-md-8 col-offset-2 lead well'>
 		    <h2>Kartendaten</h2>
-                 
+        {{"Hello"}}
    	  </div>
 	</div>
   <div class="container">
-    <div class="col-md-10">
-      <h1> {{carddb.cards[0].name}}      
-    </div> 
+    
+      <div ng-repeat='card in carddb.cards'>
+        <div class='col-md-3'>
+          <h3>{{card.name}}</h3>
+          <img ng-src='{{card.image}}' />
+        </div>
+      </div>
   </div>
+
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/angular.min.js"></script>
-    <script srv="js/app.js"></script>
-  <div class='container '>
-    <div class='row'>
-      <div class='col-md-8 col-offset-2'>
-        <p>Absatz für die Karten</p>
-      </div>
-    </div>
+    <script src="js/app.js"></script>
+
   </div>
   </body>
 
