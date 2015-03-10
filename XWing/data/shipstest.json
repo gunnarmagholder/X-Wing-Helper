@@ -1,0 +1,1 @@
+{name: "X-Wing", factions: ["Rebel Alliance"], attack: 3,  agility: 2, hull: 3,  shields: 2, actions: ["Focus", "Target Lock"], maneuvers: [[0, 0, 0, 0, 0, 0], [0, 2, 2, 2, 0, 0], [1, 1, 2, 1, 1, 0], [1, 1, 1, 1, 1, 0], [0, 0, 1, 0, 0, 3]] }
