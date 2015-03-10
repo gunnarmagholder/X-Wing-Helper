@@ -1,4 +1,5 @@
-{
+[
+        {  
           name: "Hull Upgrade",
           id: 6,
           points: 3,
@@ -16,4 +17,5 @@
           id: 8,
           points: 2,
           image: "../images/Ausruestung/s_t_beschleuniger.jpg"
-        },
+        }
+]
