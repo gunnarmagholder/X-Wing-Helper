@@ -1,0 +1,30 @@
+ {
+          name: "Wedge Antilles",
+          faction: "Rebel Alliance",
+          id: 0,
+          unique: true,
+          ship: "X-Wing",
+          skill: 9,
+          points: 29,
+          slots: ["Elite", "Torpedo", "Astromech"]
+          image: "../images/Piloten Rebellen/xwing_wedgeantilles"
+        }, {
+          name: "Garven Dreis",
+          faction: "Rebel Alliance",
+          id: 1,
+          unique: true,
+          ship: "X-Wing",
+          skill: 6,
+          points: 26,
+          slots: ["Torpedo", "Astromech"]
+          image: "../images/Piloten Rebellen/xwing_garvendreis"
+        }, {
+          name: "Red Squadron Pilot",
+          faction: "Rebel Alliance",
+          id: 2,
+          ship: "X-Wing",
+          skill: 4,
+          points: 23,
+          slots: ["Torpedo", "Astromech"]
+          image: "../images/Piloten Rebellen/xwing_rotstaffel"
+        },

@@ -1,7 +1,7 @@
 var app = angular.module('xwing', []);
 
 app.controller('cardController', function() {
-  this.cards = mtest;
+  this.modifications = mtest;
 });
 
 var mtest = [
