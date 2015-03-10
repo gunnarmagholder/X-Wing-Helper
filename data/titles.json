@@ -1,0 +1,271 @@
+[
+        {
+          name: "Zero Title",
+          id: 0,
+          skip: true
+        }, {
+          name: "Slave I",
+          id: 1,
+          unique: true,
+          points: 0,
+          ship: "Firespray-31",
+          confersAddons: [
+            {
+              type: exportObj.Upgrade,
+              slot: "Torpedo"
+            }
+          ]
+        }, {
+          name: "Millennium Falcon",
+          id: 2,
+          unique: true,
+          points: 1,
+          ship: "YT-1300",
+          actions: "Evade",
+          modifier_func: function(stats) {
+            if (__indexOf.call(stats.actions, 'Evade') < 0) {
+              return stats.actions.push('Evade');
+            }
+          }
+        }, {
+          name: "Moldy Crow",
+          id: 3,
+          unique: true,
+          points: 3,
+          ship: "HWK-290"
+        }, {
+          name: "ST-321",
+          id: 4,
+          unique: true,
+          points: 3,
+          ship: "Lambda-Class Shuttle"
+        }, {
+          name: "Royal Guard TIE",
+          id: 5,
+          points: 0,
+          ship: "TIE Interceptor",
+          confersAddons: [
+            {
+              type: exportObj.Modification
+            }
+          ],
+          restriction_func: function(ship) {
+            return ship.effectiveStats().skill > 4;
+          },
+          special_case: 'Royal Guard TIE'
+        }, {
+          name: "Dodonna's Pride",
+          id: 6,
+          unique: true,
+          points: 4,
+          ship: "CR90 Corvette (Fore)"
+        }, {
+          name: "A-Wing Test Pilot",
+          id: 7,
+          points: 0,
+          ship: "A-Wing",
+          restriction_func: function(ship) {
+            return ship.effectiveStats().skill > 1;
+          },
+          validation_func: function(ship, upgrade_obj) {
+            var elite, elites, upgrade;
+            if (!(ship.effectiveStats().skill > 1)) {
+              return false;
+            }
+            elites = (function() {
+              var _i, _len, _ref, _results;
+              _ref = ship.upgrades;
+              _results = [];
+              for (_i = 0, _len = _ref.length; _i < _len; _i++) {
+                upgrade = _ref[_i];
+                if (upgrade.slot === 'Elite' && (upgrade.data != null)) {
+                  _results.push(upgrade.data.canonical_name);
+                }
+              }
+              return _results;
+            })();
+            while (elites.length > 0) {
+              elite = elites.pop();
+              if (__indexOf.call(elites, elite) >= 0) {
+                return false;
+              }
+            }
+            return true;
+          },
+          confersAddons: [
+            {
+              type: exportObj.Upgrade,
+              slot: "Elite"
+            }
+          ],
+          special_case: "A-Wing Test Pilot"
+        }, {
+          name: "B-Wing/E",
+          id: 8,
+          skip: true,
+          points: 99,
+          ship: "B-Wing",
+          confersAddons: [
+            {
+              type: exportObj.Upgrade,
+              slot: "Crew"
+            }
+          ]
+        }, {
+          name: "Tantive IV",
+          id: 9,
+          unique: true,
+          points: 4,
+          ship: "CR90 Corvette (Fore)",
+          confersAddons: [
+            {
+              type: exportObj.Upgrade,
+              slot: "Crew"
+            }, {
+              type: exportObj.Upgrade,
+              slot: "Team"
+            }
+          ]
+        }, {
+          name: "Bright Hope",
+          id: 10,
+          energy: "+2",
+          unique: true,
+          points: 5,
+          ship: "GR-75 Medium Transport",
+          modifier_func: function(stats) {
+            return stats.energy += 2;
+          }
+        }, {
+          name: "Quantum Storm",
+          id: 11,
+          energy: "+1",
+          unique: true,
+          points: 4,
+          ship: "GR-75 Medium Transport",
+          modifier_func: function(stats) {
+            return stats.energy += 1;
+          }
+        }, {
+          name: "Dutyfree",
+          id: 12,
+          energy: "+0",
+          unique: true,
+          points: 2,
+          ship: "GR-75 Medium Transport"
+        }, {
+          name: "Jaina's Light",
+          id: 13,
+          unique: true,
+          points: 2,
+          ship: "CR90 Corvette (Fore)"
+        }, {
+          name: "Outrider",
+          id: 14,
+          unique: true,
+          points: 5,
+          ship: "YT-2400"
+        }, {
+          name: "Dauntless",
+          id: 15,
+          unique: true,
+          points: 2,
+          ship: "VT-49 Decimator"
+        }, {
+          name: "Virago",
+          id: 16,
+          unique: true,
+          points: 1,
+          ship: "StarViper",
+          restriction_func: function(ship) {
+            return ship.pilot.skill > 3;
+          },
+          confersAddons: [
+            {
+              type: exportObj.Upgrade,
+              slot: "System"
+            }, {
+              type: exportObj.Upgrade,
+              slot: "Illicit"
+            }
+          ]
+        }, {
+          name: '"Heavy Scyk" Interceptor (Cannon)',
+          canonical_name: '"Heavy Scyk" Interceptor'.canonicalize(),
+          id: 17,
+          points: 2,
+          ship: "M3-A Interceptor",
+          confersAddons: [
+            {
+              type: exportObj.Upgrade,
+              slot: "Cannon"
+            }
+          ]
+        }, {
+          name: '"Heavy Scyk" Interceptor (Torpedo)',
+          canonical_name: '"Heavy Scyk" Interceptor'.canonicalize(),
+          id: 18,
+          points: 2,
+          ship: "M3-A Interceptor",
+          confersAddons: [
+            {
+              type: exportObj.Upgrade,
+              slot: "Torpedo"
+            }
+          ]
+        }, {
+          name: '"Heavy Scyk" Interceptor (Missile)',
+          canonical_name: '"Heavy Scyk" Interceptor'.canonicalize(),
+          id: 19,
+          points: 2,
+          ship: "M3-A Interceptor",
+          confersAddons: [
+            {
+              type: exportObj.Upgrade,
+              slot: "Missile"
+            }
+          ]
+        }, {
+          name: 'IG-2000',
+          id: 20,
+          points: 0,
+          ship: "Aggressor"
+        }, {
+          name: "BTL-A4 Y-Wing",
+          id: 21,
+          points: 0,
+          ship: "Y-Wing"
+        }, {
+          name: "Andrasta",
+          id: 22,
+          unique: true,
+          points: 0,
+          ship: "Firespray-31",
+          confersAddons: [
+            {
+              type: exportObj.Upgrade,
+              slot: "Bomb"
+            }, {
+              type: exportObj.Upgrade,
+              slot: "Bomb"
+            }
+          ]
+        }, {
+          name: 'TIE/x1',
+          id: 23,
+          points: 0,
+          ship: "TIE Advanced",
+          confersAddons: [
+            {
+              type: exportObj.Upgrade,
+              slot: "System",
+              adjustment_func: function(upgrade) {
+                var copy;
+                copy = $.extend(true, {}, upgrade);
+                copy.points = Math.max(0, copy.points - 4);
+                return copy;
+              }
+            }
+          ]
+        }
+      ]

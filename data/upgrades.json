@@ -1,0 +1,854 @@
+[
+        {
+          name: "Ion Cannon Turret",
+          id: 0,
+          slot: "Turret",
+          points: 5,
+          attack: 3,
+          range: "1-2"
+        }, {
+          name: "Proton Torpedoes",
+          id: 1,
+          slot: "Torpedo",
+          points: 4,
+          attack: 4,
+          range: "2-3"
+        }, {
+          name: "R2 Astromech",
+          id: 2,
+          slot: "Astromech",
+          points: 1,
+          modifier_func: function(stats) {
+            var turn, _i, _ref, _results;
+            if ((stats.maneuvers != null) && stats.maneuvers.length > 0) {
+              _results = [];
+              for (turn = _i = 0, _ref = stats.maneuvers[1].length; 0 <= _ref ? _i < _ref : _i > _ref; turn = 0 <= _ref ? ++_i : --_i) {
+                if (stats.maneuvers[1][turn] > 0) {
+                  stats.maneuvers[1][turn] = 2;
+                }
+                if (stats.maneuvers[2][turn] > 0) {
+                  _results.push(stats.maneuvers[2][turn] = 2);
+                } else {
+                  _results.push(void 0);
+                }
+              }
+              return _results;
+            }
+          }
+        }, {
+          name: "R2-D2",
+          aka: ["R2-D2 (Crew)"],
+          canonical_name: 'r2d2',
+          id: 3,
+          unique: true,
+          slot: "Astromech",
+          points: 4
+        }, {
+          name: "R2-F2",
+          id: 4,
+          unique: true,
+          slot: "Astromech",
+          points: 3
+        }, {
+          name: "R5-D8",
+          id: 5,
+          unique: true,
+          slot: "Astromech",
+          points: 3
+        }, {
+          name: "R5-K6",
+          id: 6,
+          unique: true,
+          slot: "Astromech",
+          points: 2
+        }, {
+          name: "R5 Astromech",
+          id: 7,
+          slot: "Astromech",
+          points: 1
+        }, {
+          name: "Determination",
+          id: 8,
+          slot: "Elite",
+          points: 1
+        }, {
+          name: "Swarm Tactics",
+          id: 9,
+          slot: "Elite",
+          points: 2
+        }, {
+          name: "Squad Leader",
+          id: 10,
+          unique: true,
+          slot: "Elite",
+          points: 2
+        }, {
+          name: "Expert Handling",
+          id: 11,
+          slot: "Elite",
+          points: 2
+        }, {
+          name: "Marksmanship",
+          id: 12,
+          slot: "Elite",
+          points: 3
+        }, {
+          name: "Concussion Missiles",
+          id: 13,
+          slot: "Missile",
+          points: 4,
+          attack: 4,
+          range: "2-3"
+        }, {
+          name: "Cluster Missiles",
+          id: 14,
+          slot: "Missile",
+          points: 4,
+          attack: 3,
+          range: "1-2"
+        }, {
+          name: "Daredevil",
+          id: 15,
+          slot: "Elite",
+          points: 3
+        }, {
+          name: "Elusiveness",
+          id: 16,
+          slot: "Elite",
+          points: 2
+        }, {
+          name: "Homing Missiles",
+          id: 17,
+          slot: "Missile",
+          attack: 4,
+          range: "2-3",
+          points: 5
+        }, {
+          name: "Push the Limit",
+          id: 18,
+          slot: "Elite",
+          points: 3
+        }, {
+          name: "Deadeye",
+          id: 19,
+          slot: "Elite",
+          points: 1
+        }, {
+          name: "Expose",
+          id: 20,
+          slot: "Elite",
+          points: 4
+        }, {
+          name: "Gunner",
+          id: 21,
+          slot: "Crew",
+          points: 5
+        }, {
+          name: "Ion Cannon",
+          id: 22,
+          slot: "Cannon",
+          points: 3,
+          attack: 3,
+          range: "1-3"
+        }, {
+          name: "Heavy Laser Cannon",
+          id: 23,
+          slot: "Cannon",
+          points: 7,
+          attack: 4,
+          range: "2-3"
+        }, {
+          name: "Seismic Charges",
+          id: 24,
+          slot: "Bomb",
+          points: 2
+        }, {
+          name: "Mercenary Copilot",
+          id: 25,
+          slot: "Crew",
+          points: 2
+        }, {
+          name: "Assault Missiles",
+          id: 26,
+          slot: "Missile",
+          points: 5,
+          attack: 4,
+          range: "2-3"
+        }, {
+          name: "Veteran Instincts",
+          id: 27,
+          slot: "Elite",
+          points: 1,
+          modifier_func: function(stats) {
+            return stats.skill += 2;
+          }
+        }, {
+          name: "Proximity Mines",
+          id: 28,
+          slot: "Bomb",
+          points: 3
+        }, {
+          name: "Weapons Engineer",
+          id: 29,
+          slot: "Crew",
+          points: 3
+        }, {
+          name: "Draw Their Fire",
+          id: 30,
+          slot: "Elite",
+          points: 1
+        }, {
+          name: "Luke Skywalker",
+          id: 31,
+          unique: true,
+          faction: "Rebel Alliance",
+          slot: "Crew",
+          points: 7
+        }, {
+          name: "Nien Nunb",
+          id: 32,
+          unique: true,
+          faction: "Rebel Alliance",
+          slot: "Crew",
+          points: 1,
+          modifier_func: function(stats) {
+            var s, _i, _len, _ref, _ref1, _results;
+            _ref1 = (_ref = stats.maneuvers) != null ? _ref : [];
+            _results = [];
+            for (_i = 0, _len = _ref1.length; _i < _len; _i++) {
+              s = _ref1[_i];
+              if (s[2] > 0) {
+                _results.push(s[2] = 2);
+              } else {
+                _results.push(void 0);
+              }
+            }
+            return _results;
+          }
+        }, {
+          name: "Chewbacca",
+          id: 33,
+          unique: true,
+          faction: "Rebel Alliance",
+          slot: "Crew",
+          points: 4
+        }, {
+          name: "Advanced Proton Torpedoes",
+          canonical_name: 'Adv. Proton Torpedoes'.canonicalize(),
+          id: 34,
+          slot: "Torpedo",
+          attack: 5,
+          range: "1",
+          points: 6
+        }, {
+          name: "Autoblaster",
+          id: 35,
+          slot: "Cannon",
+          attack: 3,
+          range: "1",
+          points: 5
+        }, {
+          name: "Fire-Control System",
+          id: 36,
+          slot: "System",
+          points: 2
+        }, {
+          name: "Blaster Turret",
+          id: 37,
+          slot: "Turret",
+          points: 4,
+          attack: 3,
+          range: "1-2"
+        }, {
+          name: "Recon Specialist",
+          id: 38,
+          slot: "Crew",
+          points: 3
+        }, {
+          name: "Saboteur",
+          id: 39,
+          slot: "Crew",
+          points: 2
+        }, {
+          name: "Intelligence Agent",
+          id: 40,
+          slot: "Crew",
+          points: 1
+        }, {
+          name: "Proton Bombs",
+          id: 41,
+          slot: "Bomb",
+          points: 5
+        }, {
+          name: "Adrenaline Rush",
+          id: 42,
+          slot: "Elite",
+          points: 1
+        }, {
+          name: "Advanced Sensors",
+          id: 43,
+          slot: "System",
+          points: 3
+        }, {
+          name: "Sensor Jammer",
+          id: 44,
+          slot: "System",
+          points: 4
+        }, {
+          name: "Darth Vader",
+          id: 45,
+          unique: true,
+          faction: "Galactic Empire",
+          slot: "Crew",
+          points: 3
+        }, {
+          name: "Rebel Captive",
+          id: 46,
+          unique: true,
+          faction: "Galactic Empire",
+          slot: "Crew",
+          points: 3
+        }, {
+          name: "Flight Instructor",
+          id: 47,
+          slot: "Crew",
+          points: 4
+        }, {
+          name: "Navigator",
+          id: 48,
+          slot: "Crew",
+          points: 3,
+          epic_restriction_func: function(ship) {
+            var _ref;
+            return !((_ref = ship.huge) != null ? _ref : false);
+          }
+        }, {
+          name: "Opportunist",
+          id: 49,
+          slot: "Elite",
+          points: 4
+        }, {
+          name: "Comms Booster",
+          id: 50,
+          slot: "Cargo",
+          points: 4
+        }, {
+          name: "Slicer Tools",
+          id: 51,
+          slot: "Cargo",
+          points: 7
+        }, {
+          name: "Shield Projector",
+          id: 52,
+          slot: "Cargo",
+          points: 4
+        }, {
+          name: "Ion Pulse Missiles",
+          id: 53,
+          slot: "Missile",
+          points: 3,
+          attack: 3,
+          range: "2-3"
+        }, {
+          name: "Wingman",
+          id: 54,
+          slot: "Elite",
+          points: 2
+        }, {
+          name: "Decoy",
+          id: 55,
+          slot: "Elite",
+          points: 2
+        }, {
+          name: "Outmaneuver",
+          id: 56,
+          slot: "Elite",
+          points: 3
+        }, {
+          name: "Predator",
+          id: 57,
+          slot: "Elite",
+          points: 3
+        }, {
+          name: "Flechette Torpedoes",
+          id: 58,
+          slot: "Torpedo",
+          points: 2,
+          attack: 3,
+          range: "2-3"
+        }, {
+          name: "R7 Astromech",
+          id: 59,
+          slot: "Astromech",
+          points: 2
+        }, {
+          name: "R7-T1",
+          id: 60,
+          unique: true,
+          slot: "Astromech",
+          points: 3
+        }, {
+          name: "Tactician",
+          id: 61,
+          slot: "Crew",
+          points: 2
+        }, {
+          name: "R2-D2 (Crew)",
+          aka: ["R2-D2"],
+          canonical_name: 'r2d2',
+          id: 62,
+          unique: true,
+          slot: "Crew",
+          points: 4,
+          faction: "Rebel Alliance"
+        }, {
+          name: "C-3PO",
+          unique: true,
+          id: 63,
+          slot: "Crew",
+          points: 3,
+          faction: "Rebel Alliance"
+        }, {
+          name: "Single Turbolasers",
+          id: 64,
+          slot: "Hardpoint",
+          points: 8,
+          energy: 2,
+          attack: 4,
+          range: "3-5"
+        }, {
+          name: "Quad Laser Cannons",
+          id: 65,
+          slot: "Hardpoint",
+          points: 6,
+          energy: 2,
+          attack: 3,
+          range: "1-2"
+        }, {
+          name: "Tibanna Gas Supplies",
+          id: 66,
+          slot: "Cargo",
+          points: 4,
+          limited: true
+        }, {
+          name: "Ionization Reactor",
+          id: 67,
+          slot: "Cargo",
+          points: 4,
+          energy: 5,
+          limited: true
+        }, {
+          name: "Engine Booster",
+          id: 68,
+          slot: "Cargo",
+          points: 3,
+          limited: true
+        }, {
+          name: "R3-A2",
+          id: 69,
+          unique: true,
+          slot: "Astromech",
+          points: 2
+        }, {
+          name: "R2-D6",
+          id: 70,
+          unique: true,
+          slot: "Astromech",
+          points: 1,
+          restriction_func: function(ship) {
+            var conferred_addon, upgrade, _i, _j, _len, _len1, _ref, _ref1, _ref2;
+            if (ship.effectiveStats().skill <= 2 || __indexOf.call(ship.pilot.slots, 'Elite') >= 0) {
+              return false;
+            }
+            _ref = ship.upgrades;
+            for (_i = 0, _len = _ref.length; _i < _len; _i++) {
+              upgrade = _ref[_i];
+              if ((upgrade != null) && ((_ref1 = upgrade.data) != null ? _ref1.name : void 0) !== 'R2-D6') {
+                _ref2 = upgrade.conferredAddons;
+                for (_j = 0, _len1 = _ref2.length; _j < _len1; _j++) {
+                  conferred_addon = _ref2[_j];
+                  if (conferred_addon.slot === 'Elite') {
+                    return false;
+                  }
+                }
+              }
+            }
+            return true;
+          },
+          confersAddons: [
+            {
+              type: exportObj.Upgrade,
+              slot: "Elite"
+            }
+          ]
+        }, {
+          name: "Enhanced Scopes",
+          id: 71,
+          slot: "System",
+          points: 1
+        }, {
+          name: "Chardaan Refit",
+          id: 72,
+          slot: "Missile",
+          points: -2,
+          ship: "A-Wing"
+        }, {
+          name: "Proton Rockets",
+          id: 73,
+          slot: "Missile",
+          points: 3,
+          attack: 2,
+          range: "1"
+        }, {
+          name: "Kyle Katarn",
+          id: 74,
+          unique: true,
+          slot: "Crew",
+          points: 3,
+          faction: "Rebel Alliance"
+        }, {
+          name: "Jan Ors",
+          id: 75,
+          unique: true,
+          slot: "Crew",
+          points: 2,
+          faction: "Rebel Alliance"
+        }, {
+          name: "Toryn Farr",
+          id: 76,
+          unique: true,
+          slot: "Crew",
+          points: 6,
+          faction: "Rebel Alliance",
+          restriction_func: exportObj.hugeOnly
+        }, {
+          name: "R4-D6",
+          id: 77,
+          unique: true,
+          slot: "Astromech",
+          points: 1
+        }, {
+          name: "R5-P9",
+          id: 78,
+          unique: true,
+          slot: "Astromech",
+          points: 3
+        }, {
+          name: "WED-15 Repair Droid",
+          id: 79,
+          slot: "Crew",
+          points: 2,
+          restriction_func: exportObj.hugeOnly
+        }, {
+          name: "Carlist Rieekan",
+          id: 80,
+          unique: true,
+          slot: "Crew",
+          points: 3,
+          faction: "Rebel Alliance",
+          restriction_func: exportObj.hugeOnly
+        }, {
+          name: "Jan Dodonna",
+          id: 81,
+          unique: true,
+          slot: "Crew",
+          points: 6,
+          faction: "Rebel Alliance",
+          restriction_func: exportObj.hugeOnly
+        }, {
+          name: "Expanded Cargo Hold",
+          id: 82,
+          slot: "Cargo",
+          points: 1,
+          ship: "GR-75 Medium Transport"
+        }, {
+          name: "Backup Shield Generator",
+          id: 83,
+          slot: "Cargo",
+          limited: true,
+          points: 3
+        }, {
+          name: "EM Emitter",
+          id: 84,
+          slot: "Cargo",
+          limited: true,
+          points: 3
+        }, {
+          name: "Frequency Jammer",
+          id: 85,
+          slot: "Cargo",
+          limited: true,
+          points: 4
+        }, {
+          name: "Han Solo",
+          id: 86,
+          slot: "Crew",
+          unique: true,
+          faction: "Rebel Alliance",
+          points: 2
+        }, {
+          name: "Leia Organa",
+          id: 87,
+          slot: "Crew",
+          unique: true,
+          faction: "Rebel Alliance",
+          points: 4
+        }, {
+          name: "Targeting Coordinator",
+          id: 88,
+          slot: "Crew",
+          limited: true,
+          points: 4
+        }, {
+          name: "Raymus Antilles",
+          id: 89,
+          slot: "Crew",
+          unique: true,
+          faction: "Rebel Alliance",
+          points: 6,
+          restriction_func: exportObj.hugeOnly
+        }, {
+          name: "Gunnery Team",
+          id: 90,
+          slot: "Team",
+          limited: true,
+          points: 4
+        }, {
+          name: "Sensor Team",
+          id: 91,
+          slot: "Team",
+          points: 4
+        }, {
+          name: "Engineering Team",
+          id: 92,
+          slot: "Team",
+          limited: true,
+          points: 4
+        }, {
+          name: "Lando Calrissian",
+          id: 93,
+          slot: "Crew",
+          unique: true,
+          faction: "Rebel Alliance",
+          points: 3
+        }, {
+          name: "Mara Jade",
+          id: 94,
+          slot: "Crew",
+          unique: true,
+          faction: "Galactic Empire",
+          points: 3
+        }, {
+          name: "Fleet Officer",
+          id: 95,
+          slot: "Crew",
+          faction: "Galactic Empire",
+          points: 3
+        }, {
+          name: "Stay On Target",
+          id: 96,
+          slot: "Elite",
+          points: 2
+        }, {
+          name: "Dash Rendar",
+          id: 97,
+          unique: true,
+          slot: "Crew",
+          points: 2,
+          faction: "Rebel Alliance"
+        }, {
+          name: "Lone Wolf",
+          id: 98,
+          unique: true,
+          slot: "Elite",
+          points: 2
+        }, {
+          name: '"Leebo"',
+          id: 99,
+          unique: true,
+          slot: "Crew",
+          points: 2,
+          faction: "Rebel Alliance"
+        }, {
+          name: "Ruthlessness",
+          id: 100,
+          slot: "Elite",
+          points: 3,
+          faction: "Galactic Empire"
+        }, {
+          name: "Intimidation",
+          id: 101,
+          slot: "Elite",
+          points: 2
+        }, {
+          name: "Ysanne Isard",
+          id: 102,
+          unique: true,
+          slot: "Crew",
+          points: 4,
+          faction: "Galactic Empire"
+        }, {
+          name: "Moff Jerjerrod",
+          id: 103,
+          unique: true,
+          slot: "Crew",
+          points: 2,
+          faction: "Galactic Empire"
+        }, {
+          name: "Ion Torpedoes",
+          id: 104,
+          slot: "Torpedo",
+          points: 5,
+          attack: 4,
+          range: "2-3"
+        }, {
+          name: "Bodyguard",
+          id: 105,
+          unique: true,
+          slot: "Elite",
+          points: 2,
+          faction: "Scum and Villainy"
+        }, {
+          name: "Calculation",
+          id: 106,
+          slot: "Elite",
+          points: 1
+        }, {
+          name: "Accuracy Corrector",
+          id: 107,
+          slot: "System",
+          points: 3
+        }, {
+          name: "Inertial Dampeners",
+          id: 108,
+          slot: "Illicit",
+          points: 1
+        }, {
+          name: "Flechette Cannon",
+          id: 109,
+          slot: "Cannon",
+          points: 2,
+          attack: 3,
+          range: "1-3"
+        }, {
+          name: '"Mangler" Cannon',
+          id: 110,
+          slot: "Cannon",
+          points: 4,
+          attack: 3,
+          range: "1-3"
+        }, {
+          name: "Dead Man's Switch",
+          id: 111,
+          slot: "Illicit",
+          points: 2
+        }, {
+          name: "Feedback Array",
+          id: 112,
+          slot: "Illicit",
+          points: 2
+        }, {
+          name: '"Hot Shot" Blaster',
+          id: 113,
+          slot: "Illicit",
+          points: 3,
+          attack: 3,
+          range: "1-2"
+        }, {
+          name: "Greedo",
+          id: 114,
+          unique: true,
+          slot: "Crew",
+          faction: "Scum and Villainy",
+          points: 1
+        }, {
+          name: "Salvaged Astromech",
+          id: 115,
+          slot: "Salvaged Astromech",
+          points: 2
+        }, {
+          name: "Bomb Loadout",
+          id: 116,
+          limited: true,
+          slot: "Torpedo",
+          points: 0,
+          ship: "Y-Wing",
+          confersAddons: [
+            {
+              type: exportObj.Upgrade,
+              slot: "Bomb"
+            }
+          ]
+        }, {
+          name: '"Genius"',
+          id: 117,
+          unique: true,
+          slot: "Salvaged Astromech",
+          points: 0
+        }, {
+          name: "Unhinged Astromech",
+          id: 118,
+          slot: "Salvaged Astromech",
+          points: 1,
+          modifier_func: function(stats) {
+            var turn, _i, _ref, _results;
+            if ((stats.maneuvers != null) && stats.maneuvers.length > 3) {
+              _results = [];
+              for (turn = _i = 0, _ref = stats.maneuvers[3].length; 0 <= _ref ? _i < _ref : _i > _ref; turn = 0 <= _ref ? ++_i : --_i) {
+                if (stats.maneuvers[3][turn] > 0) {
+                  _results.push(stats.maneuvers[3][turn] = 2);
+                } else {
+                  _results.push(void 0);
+                }
+              }
+              return _results;
+            }
+          }
+        }, {
+          name: "R4-B11",
+          id: 119,
+          unique: true,
+          slot: "Salvaged Astromech",
+          points: 3
+        }, {
+          name: "Autoblaster Turret",
+          id: 120,
+          slot: "Turret",
+          points: 2,
+          attack: 2,
+          range: "1"
+        }, {
+          name: "R4 Agromech",
+          id: 121,
+          slot: "Salvaged Astromech",
+          points: 2
+        }, {
+          name: "K4 Security Droid",
+          id: 122,
+          slot: "Crew",
+          faction: "Scum and Villainy",
+          points: 3
+        }, {
+          name: "Outlaw Tech",
+          id: 123,
+          limited: true,
+          slot: "Crew",
+          faction: "Scum and Villainy",
+          points: 2
+        }, {
+          name: 'Advanced Targeting Computer',
+          canonical_name: 'Adv. Targeting Computer'.canonicalize(),
+          id: 124,
+          slot: "System",
+          points: 5,
+          ship: "TIE Advanced"
+        }, {
+          name: 'Ion Cannon Battery',
+          id: 125,
+          slot: "Hardpoint",
+          points: 6,
+          energy: 2,
+          attack: 4,
+          range: "2-4"
+        }
+      ]
