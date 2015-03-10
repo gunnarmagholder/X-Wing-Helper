@@ -1,0 +1,116 @@
+[
+        {
+          name: "Zero modification",
+          id: 0,
+          skip: true
+        }, {
+          name: "Stealth Device",
+          id: 1,
+          points: 3,
+          modifier_func: function(stats) {
+            return stats.agility += 1;
+          }
+        }, {
+          name: "Shield Upgrade",
+          id: 2,
+          points: 4,
+          modifier_func: function(stats) {
+            return stats.shields += 1;
+          }
+        }, {
+          name: "Engine Upgrade",
+          id: 3,
+          points: 4,
+          modifier_func: function(stats) {
+            if (__indexOf.call(stats.actions, 'Boost') < 0) {
+              return stats.actions.push('Boost');
+            }
+          }
+        }, {
+          name: "Anti-Pursuit Lasers",
+          id: 4,
+          points: 2,
+          restriction_func: function(ship) {
+            var _ref;
+            return (_ref = ship.data.large) != null ? _ref : false;
+          }
+        }, {
+          name: "Targeting Computer",
+          id: 5,
+          points: 2,
+          modifier_func: function(stats) {
+            if (__indexOf.call(stats.actions, 'Target Lock') < 0) {
+              return stats.actions.push('Target Lock');
+            }
+          }
+        }, {
+          name: "Hull Upgrade",
+          id: 6,
+          points: 3,
+          modifier_func: function(stats) {
+            return stats.hull += 1;
+          }
+        }, {
+          name: "Munitions Failsafe",
+          id: 7,
+          points: 1
+        }, {
+          name: "Stygium Particle Accelerator",
+          id: 8,
+          points: 2
+        }, {
+          name: "Advanced Cloaking Device",
+          id: 9,
+          points: 4,
+          ship: "TIE Phantom"
+        }, {
+          name: "Combat Retrofit",
+          id: 10,
+          points: 10,
+          ship: "GR-75 Medium Transport",
+          huge: true,
+          modifier_func: function(stats) {
+            stats.hull += 2;
+            return stats.shields += 1;
+          }
+        }, {
+          name: "B-Wing/E2",
+          id: 11,
+          points: 1,
+          ship: "B-Wing",
+          confersAddons: [
+            {
+              type: exportObj.Upgrade,
+              slot: "Crew"
+            }
+          ]
+        }, {
+          name: "Countermeasures",
+          id: 12,
+          points: 3,
+          restriction_func: function(ship) {
+            var _ref;
+            return (_ref = ship.data.large) != null ? _ref : false;
+          }
+        }, {
+          name: "Experimental Interface",
+          id: 13,
+          unique: true,
+          points: 3
+        }, {
+          name: "Tactical Jammer",
+          id: 14,
+          points: 1,
+          restriction_func: function(ship) {
+            var _ref;
+            return (_ref = ship.data.large) != null ? _ref : false;
+          }
+        }, {
+          name: "Autothrusters",
+          id: 15,
+          points: 2,
+          restriction_func: function(ship) {
+            return __indexOf.call(ship.effectiveStats().actions, "Boost") >= 0;
+          }
+        }
+      ]
