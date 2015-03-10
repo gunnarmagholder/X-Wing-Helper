@@ -36,7 +36,7 @@ var ptest = [
           ship: "X-Wing",
           skill: 9,
           points: 29,
-          slots: ["Elite", "Torpedo", "Astromech"]
+          slots: ["Elite", "Torpedo", "Astromech"],
           image: "images/Piloten Rebellen/xwing_wedgeantilles"
         }, {
           name: "Garven Dreis",
@@ -46,7 +46,7 @@ var ptest = [
           ship: "X-Wing",
           skill: 6,
           points: 26,
-          slots: ["Torpedo", "Astromech"]
+          slots: ["Torpedo", "Astromech"],
           image: "images/Piloten Rebellen/xwing_garvendreis"
         }, {
           name: "Red Squadron Pilot",
@@ -55,12 +55,12 @@ var ptest = [
           ship: "X-Wing",
           skill: 4,
           points: 23,
-          slots: ["Torpedo", "Astromech"]
+          slots: ["Torpedo", "Astromech"],
           image: "images/Piloten Rebellen/xwing_rotstaffel"
         }
 ];
 var stest = [
-"X-Wing": {
+ {
           name: "X-Wing",
           factions: ["Rebel Alliance"],
           attack: 3,
@@ -70,7 +70,7 @@ var stest = [
           actions: ["Focus", "Target Lock"],
           maneuvers: [[0, 0, 0, 0, 0, 0], [0, 2, 2, 2, 0, 0], [1, 1, 2, 1, 1, 0], [1, 1, 1, 1, 1, 0], [0, 0, 1, 0, 0, 3]]
         },
-        "Y-Wing": {
+{
           name: "Y-Wing",
           factions: ["Rebel Alliance", "Scum and Villainy"],
           attack: 2,
@@ -80,7 +80,7 @@ var stest = [
           actions: ["Focus", "Target Lock"],
           maneuvers: [[0, 0, 0, 0, 0, 0], [0, 1, 2, 1, 0, 0], [1, 1, 2, 1, 1, 0], [3, 1, 1, 1, 3, 0], [0, 0, 3, 0, 0, 3]]
         },
-        "A-Wing": {
+{
           name: "A-Wing",
           factions: ["Rebel Alliance"],
           attack: 2,
