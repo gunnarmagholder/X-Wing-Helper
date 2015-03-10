@@ -12,8 +12,8 @@ var mtest =
           points: 3,
           modifier_func: function(stats) {
             return stats.hull += 1;
+          },
           image: "../images/Ausruestung/verbesserte_huelle"
-          }
         }, {
           name: "Munitions Failsafe",
           id: 7,
