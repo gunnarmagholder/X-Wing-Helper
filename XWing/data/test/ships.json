@@ -1,0 +1,32 @@
+{
+"X-Wing": {
+          name: "X-Wing",
+          factions: ["Rebel Alliance"],
+          attack: 3,
+          agility: 2,
+          hull: 3,
+          shields: 2,
+          actions: ["Focus", "Target Lock"],
+          maneuvers: [[0, 0, 0, 0, 0, 0], [0, 2, 2, 2, 0, 0], [1, 1, 2, 1, 1, 0], [1, 1, 1, 1, 1, 0], [0, 0, 1, 0, 0, 3]]
+        },
+        "Y-Wing": {
+          name: "Y-Wing",
+          factions: ["Rebel Alliance", "Scum and Villainy"],
+          attack: 2,
+          agility: 1,
+          hull: 5,
+          shields: 3,
+          actions: ["Focus", "Target Lock"],
+          maneuvers: [[0, 0, 0, 0, 0, 0], [0, 1, 2, 1, 0, 0], [1, 1, 2, 1, 1, 0], [3, 1, 1, 1, 3, 0], [0, 0, 3, 0, 0, 3]]
+        },
+        "A-Wing": {
+          name: "A-Wing",
+          factions: ["Rebel Alliance"],
+          attack: 2,
+          agility: 3,
+          hull: 2,
+          shields: 2,
+          actions: ["Focus", "Target Lock", "Boost", "Evade"],
+          maneuvers: [[0, 0, 0, 0, 0, 0], [1, 0, 0, 0, 1, 0], [2, 2, 2, 2, 2, 0], [1, 1, 2, 1, 1, 3], [0, 0, 2, 0, 0, 0], [0, 0, 2, 0, 0, 3]]
+        },
+      }
