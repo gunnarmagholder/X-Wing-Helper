@@ -5,3 +5,6 @@
 .picture {
 	padding-bottom: 30px;
 }
+.card-title {
+  min-height: 60px;
+}

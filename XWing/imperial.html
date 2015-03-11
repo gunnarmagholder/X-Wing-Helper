@@ -4,11 +4,11 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Einführung in Boostrap</title>
+    <title>XWing - Das Imperium</title>
 
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
-
+    <link href="css/xwing.css" rel="stylesheet">
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -35,7 +35,7 @@
     
       <div ng-repeat='card in carddb.modifications'>
         <div class='col-md-3'>
-          <h3>{{card.name}}</h3>
+          <h3 class="card-title">{{card.name}}</h3>
           <img ng-src='{{card.image}}' />
         </div>
       </div>
