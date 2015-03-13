@@ -533,10 +533,7 @@
           ship: "TIE Interceptor",
           skill: 7,
           points: 24,
-          slots: ["Elite"],
-          modifier_func: function(stats) {
-            return stats.maneuvers[1][5] = 3;
-          }
+          slots: ["Elite"]
         }, {
           name: "I messed up this pilot, sorry",
           id: 60,
@@ -827,11 +824,6 @@
             hull: 0,
             shields: 0,
             actions: []
-          },
-          modifier_func: function(stats) {
-            stats.maneuvers[2][1] = 0;
-            stats.maneuvers[2][3] = 0;
-            return stats.maneuvers[4][2] = 0;
           }
         }, {
           name: "Wild Space Fringer",
@@ -1043,7 +1035,6 @@
           slots: ["Missile", "Illicit"]
         }, {
           name: "Boba Fett (Scum)",
-          canonical_name: 'Boba Fett'.canonicalize(),
           faction: "Scum and Villainy",
           id: 116,
           ship: "Firespray-31",
@@ -1053,7 +1044,6 @@
           slots: ["Elite", "Cannon", "Bomb", "Crew", "Missile", "Illicit"]
         }, {
           name: "Kath Scarlet (Scum)",
-          canonical_name: 'Kath Scarlet'.canonicalize(),
           unique: true,
           faction: "Scum and Villainy",
           id: 117,
