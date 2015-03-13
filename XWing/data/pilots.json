@@ -26,6 +26,7 @@
           points: 23,
           slots: ["Torpedo", "Astromech"]
         }, {
+
           name: "Rookie Pilot",
           faction: "Rebel Alliance",
           id: 3,
